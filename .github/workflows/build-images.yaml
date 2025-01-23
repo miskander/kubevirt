@@ -14,7 +14,7 @@ jobs:
       - name: docker login
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u miskander --password-stdin   
       - name: push
-        run: docker pull alpine:latest && docker tag alpine:latest ghcr.io/miskander/kubevirt/virt-operator:test2 && docker push ghcr.io/miskander/kubevirt/virt-operator:foo
+        run: docker pull alpine:latest && docker tag alpine:latest ghcr.io/miskander/kubevirt/virt-operator:foo && docker push ghcr.io/miskander/kubevirt/virt-operator:foo
       - name: make
         run: make             
       - name: make push
