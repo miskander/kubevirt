@@ -6,12 +6,7 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest
-    permissions:
-      packages: 
-      - read
-      - write
-      - delete    
+    runs-on: ubuntu-latest     
     env: # Set environment variables globally for all steps
       DOCKER_PREFIX: ghcr.io/miskander/kubevirt
       DOCKER_TAG: ${{ github.sha }}
