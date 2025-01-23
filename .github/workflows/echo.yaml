@@ -16,6 +16,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3           
       - name: Run make
-        run: ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u miskander --password-stdin
+        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u miskander --password-stdin
       - name: Run make push
         run: cat ~/.docker/config      
