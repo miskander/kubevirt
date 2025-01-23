@@ -421,7 +421,7 @@ func (app *virtHandlerApp) Run() {
 	// to avoid installing the SELinux policy when the feature gate is set
 	app.clusterConfig.SetConfigModifiedCallback(app.shouldInstallSELinuxPolicy)
 
-	go vmController.Run(10, stop)
+	go vmController.Run(100, stop)
 
 	doneCh := make(chan string)
 	defer close(doneCh)

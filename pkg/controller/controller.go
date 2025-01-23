@@ -43,7 +43,7 @@ import (
 const (
 	// BurstReplicas is the maximum amount of requests in a row for CRUD operations on resources by controllers,
 	// to avoid unintentional DoS
-	BurstReplicas uint = 1500
+	BurstReplicas uint = 5000
 )
 
 // Reasons for vmi events
