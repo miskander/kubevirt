@@ -16,11 +16,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3      
       - name: Run make
-        run: make
-        retry: 2      
+        run: make             
       - name: Run make push
-        run: make push
-        retry: 2      
+        run: make push             
       - name: Run make manifests
-        run: make manifests
-        retry: 2
+        run: make manifests        
