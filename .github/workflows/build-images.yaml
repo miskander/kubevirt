@@ -3,7 +3,9 @@ on:
   workflow_dispatch: # Allows manual triggering of the workflow
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest     
+    runs-on: ubuntu-latest  
+    permissions: 
+      packages: write   
     env: # Set environment variables globally for all steps
       DOCKER_PREFIX: ghcr.io/miskander/kubevirt
       DOCKER_TAG: ${{ github.sha }}
