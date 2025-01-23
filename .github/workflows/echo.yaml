@@ -18,4 +18,4 @@ jobs:
       - name: Run make
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u miskander --password-stdin
       - name: Run make push
-        run: cat ~/.docker/config      
+        run: cat ~/.docker/config.json      
