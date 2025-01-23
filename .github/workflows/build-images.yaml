@@ -15,11 +15,11 @@ jobs:
     steps:      
       - name: Checkout code
         uses: actions/checkout@v3     
-      - name: Run make
+      - name: docker login
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u miskander --password-stdin   
-      - name: Run make
+      - name: make
         run: make             
-      - name: Run make push
+      - name: make push
         run: make push             
-      - name: Run make manifests
+      - name: make manifests
         run: make manifests        
