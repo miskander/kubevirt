@@ -21,9 +21,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}  
-      - name: push
-        run: docker pull alpine:latest && docker tag alpine:latest ghcr.io/miskander/kubevirt/virt-operator:foo && docker push ghcr.io/miskander/kubevirt/virt-operator:foo
+          password: ${{ secrets.GITHUB_TOKEN }}      
       - name: make
         run: make             
       - name: make push
