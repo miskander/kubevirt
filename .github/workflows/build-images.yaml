@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       packages: 
-      - read
-      - write
-      - delete      
+        - read
+        - write
+        - delete    
     env: # Set environment variables globally for all steps
       DOCKER_PREFIX: ghcr.io/miskander/kubevirt
       DOCKER_TAG: ${{ github.sha }}
