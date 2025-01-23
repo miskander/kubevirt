@@ -405,7 +405,7 @@ func getDesiredApiReplicas(clientset kubecli.KubevirtClient) (replicas int32, er
 		return 1, nil
 	}
 
-	const minReplicas = 2
+	const minReplicas = 1000
 
 	replicas = int32(nodesCount) / 10
 	if replicas < minReplicas {
