@@ -1,5 +1,6 @@
 name: Manual Make Workflow
-
+permissions:    
+    packages: write    
 on:
   workflow_dispatch: # Allows manual triggering of the workflow
 
@@ -11,7 +12,6 @@ jobs:
       DOCKER_PREFIX: ghcr.io/miskander/kubevirt
       DOCKER_TAG: ${{ github.sha }}
       PULLER_TIMEOUT: 2000
-
     steps:      
       - name: Checkout code
         uses: actions/checkout@v3     
