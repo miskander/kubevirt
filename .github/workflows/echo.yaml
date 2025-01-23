@@ -14,10 +14,8 @@ jobs:
 
     steps:      
       - name: Checkout code
-        uses: actions/checkout@v3      
-      - name: Run login
-        run: docker login        
+        uses: actions/checkout@v3           
       - name: Run make
-        run: echo $GITHUB_TOKEN | docker login ghcr.io -u miskander --password-stdin
+        run: ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u miskander --password-stdin
       - name: Run make push
         run: cat ~/.docker/config      
